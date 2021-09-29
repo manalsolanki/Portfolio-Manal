@@ -1,0 +1,194 @@
+.titleBar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  padding-left: 5vw;
+  font-size: 1.2rem;
+  background-color: white;
+  box-shadow: 0 0 10px -2px black;
+}
+
+.title {
+  font-weight: bold;
+  padding: 20px 40px 20px 0;
+  cursor: pointer;
+}
+
+.dataContainer {
+  padding: 0 5vw;
+  padding-bottom: 20px;
+  line-height: 1.7;
+}
+
+.selfImg {
+  max-height: 300px;
+}
+
+.about {
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 60px;
+  padding-top: 60px;
+}
+
+.skills p,
+.skills h3,
+.skills h1 {
+  margin: 0;
+}
+
+.underlineText {
+  position: relative;
+  width: fit-content;
+  margin-top: 0;
+}
+
+.underlineText::after {
+  content: " ";
+  background-color: #ff9901;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 3px;
+}
+
+.centerUnderLine {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  margin-top: 0;
+}
+
+.centerUnderLine::after {
+  content: " ";
+  background-color: #ff9901;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 60%;
+  height: 3px;
+}
+
+.services {
+  padding-top: 60px;
+}
+
+.work {
+  padding-top: 30px;
+}
+
+.contact {
+  max-width: 850px;
+  padding: 30px;
+  margin: 30px auto;
+  margin-top: 60px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px -1px grey;
+  text-align: center;
+  background-color: white;
+}
+
+.contactForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  text-align: left;
+}
+
+.socialIcons {
+  display: inline-flex;
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 7px;
+  font-size: 1.3rem;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.socialIcons:hover {
+  color: white;
+  background-color: #ff9901;
+  border-color: #ff9901;
+  box-shadow: 0 0 15px -7px black;
+}
+
+.work {
+  margin-top: 30px;
+}
+
+.serviceContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 30px;
+}
+
+.serviceCard {
+  border-radius: 5px;
+  text-align: center;
+}
+
+.serviceCard p {
+  margin: 0;
+}
+
+.serviceCard h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.serviceIcon {
+  height: 75px;
+  width: auto;
+}
+
+.ma0 {
+  margin: 0;
+}
+
+.hideInMobile {
+}
+
+.success{
+  color: green;
+}
+
+.error{
+  color: red
+}
+
+@media screen and (max-width: 576px) {
+  .hideInMobile, .selfImg {
+    display: none;
+  }
+  .skills, .serviceContainer, .contactForm, .about{
+    display: block;
+  }
+  .skills div, .serviceContainer div {
+    margin-top: 20px;
+  }
+  .title{
+    padding: 0;
+  }
+  .titleBar{
+    justify-content: space-evenly;
+    padding: 15px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .serviceContainer{
+    grid-template-columns: 1fr 1fr;
+  }
+}

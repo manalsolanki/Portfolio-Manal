@@ -1,0 +1,59 @@
+html{
+  font-size: 16px;
+  font-family: sans-serif;
+  cursor: default;
+}
+
+body{
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.orange--text{
+  color: #ff9901;
+  font-weight: bold;
+}
+
+img{
+  width: auto;
+  max-width: 100%;
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+}
+
+input, textarea{
+  padding: 10px 15px;
+  margin-top: 20px;
+  width: 90%;
+  border-radius: 3px;
+  border: 1px solid gray;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus, button:focus{
+  outline: none;
+}
+
+button{
+  background-color: #ff9901;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  html{
+    font-size: 14px;
+  }
+}
