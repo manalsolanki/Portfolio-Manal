@@ -27,6 +27,7 @@ const ContactForm = props => {
     window.open("/ManalSolanki-WebDeveloper.pdf");
   };
 
+  
   const submitQuery = (e) => {
     e.preventDefault();
     e.persist()
@@ -108,7 +109,7 @@ const ContactForm = props => {
                   href="mailto:97manal@gmail.com"
                   className={classes.socialIcons}
                 >
-                  <FaEnvelope />
+                  <FaEnvelope style={{color:"black"}} />
                 </a>
                 <div className={classes.socialIcons} onClick={downloadResume}>
                   <FaFilePdf />

@@ -43,7 +43,7 @@ const Banner = (props) => {
       <div className={classes.iconContainer}>
         <div className={classes.iconDiv}>
           <a href="mailto:97manal@gmail.com">
-            <FaEnvelope />
+            <FaEnvelope style={{color:"white"}} />
           </a>
         </div>
         <div className={classes.iconDiv} onClick={downloadResume}>

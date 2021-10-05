@@ -3,6 +3,7 @@ import classes from "../styles/index.module.css";
 import Banner from "../components/banner";
 import Content from "../components/content";
 
+
 export default function Home() {
   return (
     <div>

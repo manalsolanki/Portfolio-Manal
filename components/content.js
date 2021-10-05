@@ -1,6 +1,8 @@
 import classes from "../styles/content.module.css";
 import classnames from "classnames";
 import ContactForm from './form'
+import projects from '../projects';
+import Project from "./project";
 
 const Content = (props) => {
 
@@ -46,12 +48,12 @@ const Content = (props) => {
           <div>
             <h1 className={classnames(classes.underlineText)}>About Me</h1>
             <div>
-            Meticulous web designer and developer with over 2 years of experience in 
-            blending the art of design with skills of programming to deliver an immersive and engaging user experience.
-            I am passionate about my work and love to do all my work with 100% dedication. 
-            I like to work with multidisciplinary team of dedicated professionals, 
-            with great experience, and in an open corporate culture where everyone 
-            communicate equally with technical developers as well as business.
+              Meticulous web designer and developer with over 2 years of experience in
+              blending the art of design with skills of programming to deliver an immersive and engaging user experience.
+              I am passionate about my work and love to do all my work with 100% dedication.
+              I like to work with multidisciplinary team of dedicated professionals,
+              with great experience, and in an open corporate culture where everyone
+              communicate equally with technical developers as well as business.
             </div>
           </div>
           <img src="/manalSolanki.jpeg" alt="Self" className={classes.selfImg} />
@@ -82,77 +84,28 @@ const Content = (props) => {
           <div>
             <h3>IDE and Tools</h3>
             <p className="skills-description">
-            Eclipse, GitHub, MS Visual Studio Code, MS VisualStudio, PHP Storm
+              Eclipse, GitHub, MS Visual Studio Code, MS VisualStudio, PHP Storm
             </p>
           </div>
         </div>
         <div className={classes.services} id="Projects">
           <h1 className={classnames(classes.underlineText)}>Projects</h1>
-          {/* <div className={classes.serviceContainer}>
-            <div className={classes.serviceCard}>
-              <img
-                src="/laptop.png"
-                alt="Laptop"
-                className={classes.serviceIcon}
-              />
-              <h3>Web Development</h3>
-              <p>
-                Create websites from designs provided in PSD format or even
-                design attractive and catchy website from client requirements.
-              </p>
+      
+            <div className={classes.projectContainer}>
+              {projects.map(project => {
+                return (<div className={classes.projectSection}>
+                  <Project project={project}></Project>
+                </div>)
+              })}
             </div>
-            <div className={classes.serviceCard}>
-              <img
-                src="/mobile.png"
-                alt="mobile"
-                className={classes.serviceIcon}
-              />
-              <h3>Responsive</h3>
-              <p>
-                More than a half of the user traffic comes from smart phones and
-                sites must be developed by keeping large audience in mind.
-              </p>
-            </div>
-            <div className={classes.serviceCard}>
-              <img
-                src="backend.png"
-                alt="backend"
-                className={classes.serviceIcon}
-              />
-              <h3>Backend Development</h3>
-              <p>
-                Backend in technologies such as NodeJS, Python (Django), Java
-                (Spring, hibernate) with security concerns and optimum data
-                extraction.
-              </p>
-            </div>
-            <div className={classes.serviceCard}>
-              <img
-                src="database.png"
-                alt="database"
-                className={classes.serviceIcon}
-              />
-              <h3>Databases</h3>
-              <p>
-                Worked with few kind of databases as Relational Database (MySql,
-                Postgres) and NoSQL database (MongoDb).
-              </p>
-            </div>
-            <div className={classes.serviceCard}>
-              <img src="/more.png" alt="more" className={classes.serviceIcon} />
-              <h3>Others</h3>
-              <p>
-                Also worked on complementary things as PWAs, Service Workers,
-                GraphQL and Real Time applications (firebase and socket).
-              </p>
-            </div>
-          </div> */}
+
+          
         </div>
-        {/* <div className={classes.work} id="work">
+        {/* <div classNameName={classes.work} id="work">
           <h1 className={classnames(classes.underlineText)}>Work</h1>
           Work
         </div> */}
-        <ContactForm  />
+        <ContactForm />
       </div>
     </>
   );
